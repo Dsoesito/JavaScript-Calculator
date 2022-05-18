@@ -49,7 +49,7 @@ function updateDisplay(val) {
   if (JSON.stringify(currentDisplay.value)[1] == ".") {
     currentDisplay.value = currentDisplay.value.replace(/^/, "0");
   }
-  currentDisplay.value = null;
+
   currentDisplay.value = currentDisplay.value += val;
 }
 
@@ -58,11 +58,12 @@ function updateMiniDisplay(operation) {
     currentDisplay.value = currentDisplay.value.replace(/^/, "-");
     return;
   }
-  if (miniDisplay.value !== null) {
-    calculate();
-  }
+  // if (miniDisplay.value !== null) {
+  //   calculate();
+  // }
   firstValue = JSON.parse(currentDisplay.value);
   miniDisplay.value = operation;
+  currentDisplay.value = null;
 }
 
 function clear() {
