@@ -58,9 +58,9 @@ function updateMiniDisplay(operation) {
     currentDisplay.value = currentDisplay.value.replace(/^/, "-");
     return;
   }
-  // if (miniDisplay.value !== null) {
-  //   calculate();
-  // }
+  if (miniDisplay.value !== null) {
+    calculate();
+  }
   firstValue = JSON.parse(currentDisplay.value);
   miniDisplay.value = operation;
   currentDisplay.value = null;
